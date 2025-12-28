@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-all duration-300;
+  }
+
+  body {
+    @apply bg-background-light dark:bg-background-dark text-text-dark dark:text-text-light;
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-8 rounded-2xl shadow-lg;
+    @apply transition-all duration-300 transform hover:scale-105 active:scale-95;
+    @apply focus:outline-none focus:ring-4 focus:ring-primary/50;
+  }
+
+  .card {
+    @apply bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6;
+    @apply border border-slate-200 dark:border-slate-700;
+  }
+
+  .gradient-hero {
+    @apply bg-gradient-to-br from-background-dark to-slate-800;
+  }
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
